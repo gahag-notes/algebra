@@ -30,18 +30,20 @@ Propriedades dos números inteiros $\mathbb{Z}$ com respeito às operações ele
 Sejam $a, b \in \mathbb{Z}$ com $b \neq 0$, a divisão euclidiana de $a$ por $b$ consiste na identidade
 \[ a = b \cdot q + r \qquad q, r \in \mathbb{Z} \> \land \> 0 \leq r < b \]
 
+
 \subsection{Divisibilidade}
 Sejam $a, b \in \mathbb{Z}$ com $b \neq 0$, dizemos que $b$ divide $a$, denotando $b\,|\,a$, se
 \[ \exists \> c \in \mathbb{Z}: \enspace a = b \cdot c \]
 Propriedades:
 \begin{itemize}
   \item $\forall \> a \in \mathbb{Z}: \enspace a\,|\,0$
-  \item $\forall \> a \in \mathbb{Z}: \enspace \pm 1\,|\,0$
+  \item $\forall \> a \in \mathbb{Z}: \enspace \pm 1\,|\,a$
   \item $\forall \> a \in \mathbb{Z}: \enspace \pm a\,|\,a$
   \item $\forall \> c \in \mathbb{Z}: \enspace a\,|\,b \implies ac\,|\,bc$
   \item $\forall \> x, y \in \mathbb{Z}: \enspace a\,|\,b \> \land \> a\,|\,c \implies a\,|\,(bx + cy)$
   \item $\forall \> a, b \in \mathbb{Z}: \enspace a\,|\,b \> \land \> b\,|\,a \implies b = \pm a$
 \end{itemize}
+
 
 \subsection{Máximo Divisor Comum}
 Sejam $a, b \in \mathbb{Z}$ com $(a, b) \neq (0, 0)$, o máximo divisor comum de $a$ e $b$ é um inteiro $d$ tal que
@@ -51,9 +53,31 @@ Sejam $a, b \in \mathbb{Z}$ com $(a, b) \neq (0, 0)$, o máximo divisor comum de
 \end{gather*}
 \vspace{-10pt}
 \begin{tabbing}
-  \uline{Lema}: \= Sejam $a, b \in \mathbb{Z}$ com $(a,b) \neq (0,0)$, e $q, r \in \mathbb{Z}$ com $a = b \cdot q + r$. \\[5pt]
+  \uline{Lema}: \= Sejam $a, b \in \mathbb{Z}$ com $(a,b) \neq (0,0)$, e $q, r \in \mathbb{Z}$ com $a = b \cdot q + r$. \\
   \> O $\text{mdc}(a,b)$, se existe, é igual a $\text{mdc}(b, r)$.
 \end{tabbing}
+\vspace{7pt}
+\uline{Identidade de Bézout}: Sejam $a, b \in \mathbb{Z}$ com $(a,b) \neq (0,0)$, então
+\vspace{-5pt}
+\[ \exists \, \alpha, \beta \in \mathbb{Z}: \enspace \alpha \cdot a + \beta \cdot b = \text{mdc}(a,b) \]
+\uline{Lema de Euclides}: Sejam $a,b,c \in \mathbb{Z}$ com $a,b,c \neq 0$. Se $a|bc$ e $\text{mdc}(a,b) = 1$, então $a|c$. \\[10pt]
+Propriedades: Sejam $a,b,c \in \mathbb{Z}$ com $a,b,c \neq 0$
+\begin{itemize}
+  \item $\text{mdc}(a,c) = \text{mdc}(b,c) \iff \text{mdc}(a b,c) = 1$
+  \item $\text{mdc}(a,b) = d \iff \text{mdc} \left( \dfrac{a}{d}, \dfrac{b}{d} \right) = 1$
+  \item $a \,|\, c \:\land\: b \,|\, c \implies \left( \dfrac{ab}{\text{mdc}(a,b)} \right) \bigg | \, c$
+  \item $(a \,|\, c \:\land\: b \,|\, c \:\land\: \text{mdc}(a,b) = 1) \implies ab \,|\, c$
+\end{itemize}
+
+
+\subsection{Mínimo Multiplo Comum}
+Sejam $a, b \in \mathbb{Z}$ com $(a, b) \neq (0, 0)$, o mínimo multiplo comum de $a$ e $b$ é um inteiro $m$ tal que
+\begin{gather*}
+  a \,|\, m \:\land\: b \,|\, m \\[5pt]
+  \forall \> m': \enspace a \,|\, m' \:\land\: b \,|\, m' \implies m \,|\, m'
+\end{gather*}
+\uline{Teorema}: $\forall \, a, b \in \mathbb{Z}, (a, b) \neq (0, 0): \enspace \text{mmc}(a,b) = \dfrac{ab}{\text{mdc}(a,b)}$
+
 
 
 \end{document}
