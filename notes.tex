@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{upgreek}
+\usepackage{pgfplots}
+\usepackage{qtree}
+\usepackage{calc}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\section{Teoria dos Números}
+Propriedades dos números inteiros $\mathbb{Z}$ com respeito às operações elementares.
+\begin{tabbing}
+  Equação diofantina: \= Equação polinomial que permite a duas ou mais variáveis \\
+  \> assumirem apenas valores inteiros.
+\end{tabbing}
+
+
+
+\section{Algoritmos Fundamentais}
+
+\subsection{Divisão Euclidiana}
+Sejam $a, b \in \mathbb{Z}$ com $b \neq 0$, a divisão euclidiana de $a$ por $b$ consiste na identidade
+\[ a = b \cdot q + r \qquad q, r \in \mathbb{Z} \> \land \> 0 \leq r < b \]
+
+\subsection{Divisibilidade}
+Sejam $a, b \in \mathbb{Z}$ com $b \neq 0$, dizemos que $b$ divide $a$, denotando $b\,|\,a$, se
+\[ \exists \> c \in \mathbb{Z}: \enspace a = b \cdot c \]
+Propriedades:
+\begin{itemize}
+  \item $\forall \> a \in \mathbb{Z}: \enspace a\,|\,0$
+  \item $\forall \> a \in \mathbb{Z}: \enspace \pm 1\,|\,0$
+  \item $\forall \> a \in \mathbb{Z}: \enspace \pm a\,|\,a$
+  \item $\forall \> c \in \mathbb{Z}: \enspace a\,|\,b \implies ac\,|\,bc$
+  \item $\forall \> x, y \in \mathbb{Z}: \enspace a\,|\,b \> \land \> a\,|\,c \implies a\,|\,(bx + cy)$
+  \item $\forall \> a, b \in \mathbb{Z}: \enspace a\,|\,b \> \land \> b\,|\,a \implies b = \pm a$
+\end{itemize}
+
+\subsection{Máximo Divisor Comum}
+Sejam $a, b \in \mathbb{Z}$ com $(a, b) \neq (0, 0)$, o máximo divisor comum de $a$ e $b$ é um inteiro $d$ tal que
+\begin{gather*}
+  d \,|\, a \> \land \> d \,|\, b \\[5pt]
+  \forall \> d': \enspace d' \,|\, a \> \land \> d' \,|\, b \implies d' \,|\, d
+\end{gather*}
+\vspace{-10pt}
+\begin{tabbing}
+  \uline{Lema}: \= Sejam $a, b \in \mathbb{Z}$ com $(a,b) \neq (0,0)$, e $q, r \in \mathbb{Z}$ com $a = b \cdot q + r$. \\[5pt]
+  \> O $\text{mdc}(a,b)$, se existe, é igual a $\text{mdc}(b, r)$.
+\end{tabbing}
+
+
+\end{document}
