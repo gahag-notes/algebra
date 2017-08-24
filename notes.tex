@@ -15,15 +15,6 @@
 
 \begin{document}
 
-\section{Teoria dos Números}
-Propriedades dos números inteiros $\mathbb{Z}$ com respeito às operações elementares.
-\begin{tabbing}
-  Equação diofantina: \= Equação polinomial que permite a duas ou mais variáveis \\
-  \> assumirem apenas valores inteiros.
-\end{tabbing}
-
-
-
 \section{Conceitos Fundamentais}
 
 \subsection{Divisão Euclidiana}
@@ -85,13 +76,34 @@ Um número $p$ é primo se os únicos divisores de $p$ são $\pm1$ e $\pm p$.
   \uline{Lema}: \= Seja $p \in \mathbb{Z}$ primo, e $x_1, \hdots, x_n \in \mathbb{Z}$. \\
   \> Se $p \mid (x_1 \cdot \hdots \cdot x_n)$, então $p \mid x_i$ para ao menos algum $i \in [1, n] \subset \mathbb{Z}$.
 \end{tabbing}
+\vspace{10pt}
 \uline{Teorema}: Qualquer número natural $n \geq 2$ é produto de um conjunto \uline{único} e finito de números primos.
 \begin{tabbing}
-  \uline{Corolário}: \= Seja $n \in \mathbb{Z}$ com $n \neq 0, \pm 1$. \\
+  \uline{Corolário}: \= Seja $a \in \mathbb{Z}$ com $a \neq 0, \pm 1$. \\
   \> Sejam $p_1, \hdots, p_n \in \mathbb{Z}$ primos. \\
   \> Sejam $h_1, \hdots, h_n \in \mathbb{Z}$ maiores que $0$. \\
-  \> $n$ pode ser escrito como $n = \pm \left( p_1^{h_1} + \hdots + p_n^{h_n} \right)$
+  \> $a$ pode ser escrito como $a = \pm \left( p_1^{h_1} \cdot \hdots \cdot p_n^{h_n} \right)$
 \end{tabbing}
+\begin{tabbing}
+  \uline{Corolário}: \= Seja $a, b \in \mathbb{Z}$ com $a$ e $b \neq 0, \pm 1$. \\
+  \> Sejam $\forall\: i : h_i, k_i \geq 0$, e $p_1, \hdots, p_n \in \mathbb{Z}$ primos tais que \\[3pt]
+  \> $a = \pm \enspace p_1^{h_1} \cdot \hdots \cdot p_n^{h_n}$ \\[3pt]
+  \> $b = \pm \enspace p_1^{k_1} \cdot \hdots \cdot p_n^{k_n}$ \\[3pt]
+  \> Então: \\
+  \>\begin{minipage}{\linewidth}
+    \begin{itemize}
+      \item $\text{mdc}(a,b) = p_1^{d_1} \cdot \hdots \cdot p_n^{d_n}$, onde $d_i = \text{min}(h_i, k_i)$
+      \item $\text{mmc}(a,b) = p_1^{d_1} \cdot \hdots \cdot p_n^{d_n}$, onde $d_i = \text{max}(h_i, k_i)$
+    \end{itemize}
+  \end{minipage}
+\end{tabbing}
+\vspace{10pt}
+\uline{Teorema}: Há um número infinito de números primos. \\[5pt]
+\uline{Corolário}: Seja $p \in \mathbb{Z}$ primo com $p > 0$, então $\sqrt{p} \in \mathbb{Q}$.
+
+
+\subsection{Fatoração}
+\uline{Lema}: Seja $n = ab \in \mathbb{Z}$ com $n \neq 0, \pm 1$, então $a \leq \lfloor \sqrt{n} \rfloor \>\lor\> b \leq \lfloor \sqrt{n} \rfloor$.
 
 
 
