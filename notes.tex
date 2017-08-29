@@ -70,6 +70,10 @@ Sejam $a, b \in \mathbb{Z}$ com $(a, b) \neq (0, 0)$, o mínimo multiplo comum d
 \uline{Teorema}: $\forall \, a, b \in \mathbb{Z}, (a, b) \neq (0, 0): \enspace \text{mmc}(a,b) = \dfrac{ab}{\text{mdc}(a,b)}$
 
 
+\subsection{Fatoração}
+\uline{Lema}: Seja $n = ab \in \mathbb{Z}$ com $n \neq 0, \pm 1$, então $a \leq \lfloor \sqrt{n} \rfloor \>\lor\> b \leq \lfloor \sqrt{n} \rfloor$.
+
+
 \subsection{Números Primos}
 Um número $p$ é primo se os únicos divisores de $p$ são $\pm1$ e $\pm p$.
 \begin{tabbing}
@@ -99,11 +103,36 @@ Um número $p$ é primo se os únicos divisores de $p$ são $\pm1$ e $\pm p$.
 \end{tabbing}
 \vspace{10pt}
 \uline{Teorema}: Há um número infinito de números primos. \\[5pt]
-\uline{Corolário}: Seja $p \in \mathbb{Z}$ primo com $p > 0$, então $\sqrt{p} \in \mathbb{Q}$.
+\uline{Corolário}: Seja $p \in \mathbb{Z}$ primo com $p > 0$, então $\sqrt{p} \in \mathbb{Q}$.\\[10pt]
+\uline{Teorema}: Não há forma polinomial que gere \uline{apenas} números primos. \\[10pt]
+\uline{Teorema}: Sejam $a, b \in \mathbb{N}^+$ com $\text{mdc}(a,b) = 1$, então a sequência ${\left( an + b \right)}_{n=0}^{\infty}$ contém infinitos primos. \\[10pt]
+A função para o número de primos menores que $x \in \mathbb{R}$ é
+\[ \pi(x) \sim \frac{x}{\ln x} \]
 
+\pagebreak
 
-\subsection{Fatoração}
-\uline{Lema}: Seja $n = ab \in \mathbb{Z}$ com $n \neq 0, \pm 1$, então $a \leq \lfloor \sqrt{n} \rfloor \>\lor\> b \leq \lfloor \sqrt{n} \rfloor$.
+\subsubsection{Números de Fermat}
+Os números de Fermat são dados pela função
+\begin{gather*}
+  F: \mathbb{N}^+ \to \mathbb{N}^+ \\
+  F(n) = 2^{2^n} + 1
+\end{gather*}
+\uline{Teorema}: Nem todos números de Fermat são primos. \\[5pt]
+\uline{Teorema}: Seja $a \geq 2 \in \mathbb{Z}$ e $a^2 + 1$ primo. Então $a$ é par e $n = 2^m$.
+\begin{tabbing}
+  \uline{Teorema}: \= $\forall \: k \in \mathbb{Z}, n \in \mathbb{N}^+: \text{mdc}(F(n), F(n + k)) = 1$. \\
+  \> Ou seja, \uline{todos} números de Fermat são co-primos entre si.
+\end{tabbing}
+\uline{Corolário}: Como $F(1), \hdots, F(n)$ são co-primos, entre seus fatores há ao menos $n$ números primos distintos.
+
+\subsubsection{Números de Mersenne}
+Os números de Mersenne são dados pela função
+\begin{gather*}
+  M: \mathbb{P} \to \mathbb{N}^+ \\
+  M(p) = 2^p - 1
+\end{gather*}
+\uline{Teorema}: Nem todos números de Mersenne são primos. \\[5pt]
+\uline{Teorema}: Seja $a \in \mathbb{Z}$ com $a \geq 1$. Então $a^n - 1$ é primo se e somente se $a = 2$ e $n$ é primo.
 
 
 
