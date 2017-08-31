@@ -2,13 +2,15 @@
 
 \usepackage[margin=1in]{geometry}
 
-\usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{upgreek}
+\usepackage{calc}
+\usepackage{lmodern}
 \usepackage{pgfplots}
 \usepackage{qtree}
-\usepackage{calc}
+\usepackage{slashed}
+\usepackage{upgreek}
+\usepackage{xfrac}
 \usepackage[normalem]{ulem}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -134,6 +136,65 @@ Os números de Mersenne são dados pela função
 \uline{Teorema}: Nem todos números de Mersenne são primos. \\[5pt]
 \uline{Teorema}: Seja $a \in \mathbb{Z}$ com $a \geq 1$. Então $a^n - 1$ é primo se e somente se $a = 2$ e $n$ é primo.
 
+
+
+\section{Congruências}
+
+\subsection{Relações de Equivalência}
+Uma relação sobre um conjunto $A$ é um subconjunto $R \subset A \times A$. \\
+Dizemos que $a R b$ se $(a,b) \in R$. \\[5pt]
+Uma relação \uline{pode} ter as seguintes propriedades:
+\begin{itemize}
+  \item Reflexividade: se $\forall \: a \in A: aRa$.
+  \item Simetria: se $\forall \: a,b \in A: aRb \implies bRa$.
+  \item Transitividade: $\forall \: a,b,c \in A: aRb \land bRc \implies aRc$.
+  \item Antissimetria: se $\forall \: a,b \in A: aRb \land bRa \implies a = b$.
+  \item Totalidade: se $\forall \: a,b \in A: aRb \oplus bRa$.
+\end{itemize}
+\uline{Definição}: Uma relação $R$ sobre $A$ é de \uline{equivalência} se ela é reflexiva, simétrica e transitiva.
+
+
+\pagebreak
+
+
+\subsection{Classes de Equivalência}
+Seja $a \in A$ e $R$ uma relação de equivalência sobre $A$. Definimos a classe de equivalência de $a$ como
+\[ {[a]}_R := \{ x \in A \mid aRx \} = \{ x \in A \mid xRa \} \]
+Propriedades:
+\begin{itemize}
+  \item $\forall \: a \in A: a \in {[a]}_R$
+  \item ${[a]}_R = {[b]}_R \iff aRb$
+  \item ${[a]}_R \cap {[b]}_R = \varnothing \iff a\slashed{R}b$
+  \item As classes de equivalência de um conjunto formam uma partição deste: $\forall \: A: A = \bigsqcup\limits_{a \in A} {[a]}_R$
+\end{itemize}
+Seja $R$ uma relação de equivalência sobre $A$. Denotamos o conjunto das classes de equivalência de $R$
+\[ A_{/R} := \{ {[a]}_R \mid a \in A \} \]
+
+
+\subsection{Congruência}
+Seja $m \in \mathbb{Z}$ com $m > 1$. Dizemos que $a$ é congruente $b$ módulo $m$ se $m \mid (a - b)$. Denota-se
+\[ a \equiv_m b \]
+\uline{Teorema}: Para qualquer $m > 1$, $\equiv_m$ forma uma relação de equivalência sobre $\mathbb{Z}$.
+\begin{itemize}
+  \item $\forall \: a \in \mathbb{Z}: a \equiv_m a$.
+  \item $\forall \: a,b \in \mathbb{Z}: a \equiv_m b \implies b \equiv_m a$.
+  \item $\forall \: a,b,c \in \mathbb{Z}: a \equiv_m b \land b \equiv_m c \implies a \equiv_m c$.
+\end{itemize}
+\vspace{5pt}
+Propriedades:
+\begin{itemize}
+  \item $a \equiv_m 0 \iff m \mid a$.
+  \item $a \equiv_m b \iff -a \equiv_m -b$.
+  \item $a \equiv_m b \:\land\: a' \equiv_m b' \implies (a + a') \equiv_m (b + b')$.
+  \item $a \equiv_m b \:\land\: a' \equiv_m b' \implies (a \cdot a') \equiv_m (b \cdot b')$.
+  \item $\forall \: k \neq 0 \in \mathbb{Z}: a \equiv_m b \iff ka \equiv_m kb$.
+\end{itemize}
+\vspace{-2pt}
+\begin{tabbing}
+  \uline{Teorema}: \= Seja $m \in \mathbb{Z}$ com $m > 1$. Então $\mathbb{Z}_{/m} = \{ {[0]}_m, {[1]}_m, \hdots {[m - 1]}_m \}$ \\[5pt]
+  \> Portanto, $\big| \mathbb{Z}_{/m} \big| = m$.
+\end{tabbing}
+\uline{Corolário}: Seja $p(x)$ um polinômio com coeficientes inteiros. Então $a \equiv_m b \implies p(a) \equiv_m p(b)$.
 
 
 \end{document}
