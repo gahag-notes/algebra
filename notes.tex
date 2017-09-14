@@ -14,6 +14,7 @@
 \usepackage[normalem]{ulem}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
 
 \begin{document}
 
@@ -196,6 +197,38 @@ Propriedades:
 \end{tabbing}
 \uline{Corolário}: Seja $p(x)$ um polinômio com coeficientes inteiros. Então $a \equiv_m b \implies p(a) \equiv_m p(b)$.
 %Criterios de divisibilidade: 4, 5, 9, 11
+
+\subsubsection{Inverso Aritmético}
+Sejam $a, n \in \mathbb{Z}$. O inverso mod $n$ de $a$ é um número $a'$ tal que
+\[ a \cdot a' \equiv_n 1 \]
+\uline{Teorema}: O inverso de $a$ existe se e somente se $\text{mdc}(a,n) = 1$.
+
+\subsubsection{Equações Lineares de Congruência}
+Sejam $a, b, n \in \mathbb{Z}$ com $n \neq 0$. Uma equação linear de congruência é da forma
+\[ ax \equiv_n b \]
+Duas equações lineares de congruência são equivalentes se o conjunto solução de ambas é o mesmo.\\
+\begin{tabbing}
+  \uline{Teorema}: \= Uma equação linear de congruência $ax \equiv_n b$ possui solução inteira se e somente se \\[5pt]
+  \>\begin{minipage}{\textwidth}
+    \[ \text{mdc}(a,n) \mid b \]
+    Se a equação possui uma ou mais soluções inteiras, e seja $d = \text{mdc}(a,n)$. \\
+    Então, esta equação é equivalente à equação reduzida
+    \[ \frac{a}{d} \cdot x \equiv_{\frac{n}{d}} \frac{b}{d} \]
+    Seja $ax \equiv_n b$ uma equação de congruência reduzida ($\text{mdc}(a, n) = 1$). \\
+    Seja $a'$ um inverso aritmético mod $n$ de $a$. \\
+    Então, a equação é equivalente a
+    \[ x \equiv_n a \cdot a' \]
+  \end{minipage}
+\end{tabbing}
+
+
+
+\section{Resíduo}
+Seja $n \in \mathbb{N}^*$ e $a \in \mathbb{Z}$. O resíduo $r$ de $a$ mod $n$ é o resto da divisão euclidiana de $a$ por $n$.
+\[ r \equiv_n a \]
+Portanto, o resíduo é \uline{único} e \uline{mínimo}.
+
+% exponenciação modular: residuo de a^k mod n
 
 
 \end{document}
