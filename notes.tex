@@ -231,4 +231,32 @@ Portanto, o resíduo é \uline{único} e \uline{mínimo}.
 % exponenciação modular: residuo de a^k mod n
 
 
+
+\section{Sistemas Lineares de Congruência}
+Um sistema linear de equações de congruência é do tipo
+\[
+  \begin{cases}
+    a_1 \cdot x \equiv_{n_1} b_1 \\
+    \qquad \vdots \\
+    a_s \cdot x \equiv_{n_s} b_s \\
+  \end{cases}
+\]
+Dizemos que o sistema é compatível se ele possuir ao menos uma solução inteira. \\[5pt]
+Se um sistema é compatível, então todas suas equações são compatíveis. Então
+\[ \forall\: i \in [1, s]:\> \text{mdc}(a_i, n_i) \mid b_i \]
+Portanto, o sistema compatível é equivalente ao sistema
+\[
+  \begin{cases}
+    x \equiv_{n'_1} b_1 \\
+    \quad \vdots \\
+    x \equiv_{n'_s} b_s
+  \end{cases}
+  \text{onde } n'_i = \frac{n_i}{\text{mdc}(a_i, n_i)}
+\]
+
+% sistema chinês
+% teorema chinês do resto
+% pics
+
+
 \end{document}
