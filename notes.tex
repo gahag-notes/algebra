@@ -161,6 +161,7 @@ Uma relação \uline{pode} ter as seguintes propriedades:
 \subsection{Classes de Equivalência}
 Seja $a \in A$ e $R$ uma relação de equivalência sobre $A$. Definimos a classe de equivalência de $a$ como
 \[ {[a]}_R := \{ x \in A \mid aRx \} = \{ x \in A \mid xRa \} \]
+Notação: $\bar{a} := {[a]}_m$ \\[5pt]
 Propriedades:
 \begin{itemize}
   \item $\forall \: a \in A: a \in {[a]}_R$
@@ -226,7 +227,7 @@ Duas equações lineares de congruência são equivalentes se o conjunto soluç�
 \section{Resíduo}
 Seja $n \in \mathbb{N}^*$ e $a \in \mathbb{Z}$. O resíduo $r$ de $a$ mod $n$ é o resto da divisão euclidiana de $a$ por $n$.
 \[ r \equiv_n a \]
-Portanto, o resíduo é \uline{único} e \uline{mínimo}.
+Portanto, o resíduo é \uline{único} e \uline{mínimo}. \\[10pt]
 
 % exponenciação modular: residuo de a^k mod n
 
@@ -253,10 +254,49 @@ Portanto, o sistema compatível é equivalente ao sistema
   \end{cases}
   \text{onde } n'_i = \frac{n_i}{\text{mdc}(a_i, n_i)}
 \]
+Sejam $m, n \in \mathbb{Z}$ co-primos. A congruência $x \equiv_{(m \cdot n)} a$ é equivalente ao sistema chinês
+\[
+  \begin{cases}
+    x \equiv_m a \\
+    x \equiv_n a
+  \end{cases}
+\]
 
 % sistema chinês
 % teorema chinês do resto
 % pics
+
+
+
+\section{Anéis}
+Seja $A$ um conjunto. Uma operação binária sobre $A$ é uma função
+\[ *: A \times A \to A \]
+Uma operação binária \uline{pode} ter as seguintes propriedades:
+\begin{itemize}
+  \item associativa: $\forall\: a,b,c \in A: a * (b * c) = (a * b) * c$
+  \item elemento neutro: $\exists\: \lambda \in A, \forall\: a \in A: a * \lambda = \lambda * a = a$
+  \item inverso: $\forall\: a \in A, \exists\: a' \in A: a * a' = a' * a = \lambda$
+  \item comutatividade: $\forall\: a,b \in A: a * b = b * a$
+\end{itemize}
+\vspace{10pt}
+\uline{Definição}: Um conjunto $A$ com operações $+$ e $\cdot$ é um anel comutativo unitário se
+\begin{itemize}
+  \item $+$ e $\cdot$ são associativos, comutativos e possuem elemento neutro.
+  \item $+$ possui inverso.
+\end{itemize}
+Se, além disso, $(A, +, \cdot)$ é tal que $(A \setminus \{0\}, \cdot)$ possui inverso, dizemos que $A$ é um corpo.
+
+
+\subsection{Anéis em $\mathbb{Z}$}
+Podemos definir as operações $+$ e $\cdot$ para as classes de equivalência de qualquer $m$ sobre os inteiros
+\begin{align*}
+  & \forall\: {[a]}_m, {[b]}_m \in \mathbb{Z}_{/m}: {[a]}_m + {[b]}_m := {[a + b]}_m \\
+  & \forall\: {[a]}_m, {[b]}_m \in \mathbb{Z}_{/m}: {[a]}_m \cdot {[b]}_m := {[a \cdot b]}_m
+\end{align*}
+\uline{Teorema}: $(\mathbb{Z}_{/m}, +, \cdot)$ é um anel comutativo unitário $\forall\: m \in \mathbb{Z}$. \\[5pt]
+\uline{Teorema}: Seja $\bar{a} \cdot \bar{c} = \bar{b} \cdot \bar{c}$ em $Z_{/m}$. Se $c$ e $m$ são co-primos, então $\bar{a} = \bar{b}$
+
+
 
 
 \end{document}
