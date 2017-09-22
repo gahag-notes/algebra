@@ -227,7 +227,7 @@ Duas equações lineares de congruência são equivalentes se o conjunto soluç�
 \section{Resíduo}
 Seja $n \in \mathbb{N}^*$ e $a \in \mathbb{Z}$. O resíduo $r$ de $a$ mod $n$ é o resto da divisão euclidiana de $a$ por $n$.
 \[ r \equiv_n a \]
-Portanto, o resíduo é \uline{único} e \uline{mínimo}. \\[10pt]
+Portanto, o resíduo é \uline{único} e \uline{mínimo}.
 
 % exponenciação modular: residuo de a^k mod n
 
@@ -254,7 +254,8 @@ Portanto, o sistema compatível é equivalente ao sistema
   \end{cases}
   \text{onde } n'_i = \frac{n_i}{\text{mdc}(a_i, n_i)}
 \]
-Sejam $m, n \in \mathbb{Z}$ co-primos. A congruência $x \equiv_{(m \cdot n)} a$ é equivalente ao sistema chinês
+\\[10pt]
+\uline{Teorema}: Sejam $m, n \in \mathbb{Z}$ co-primos. A congruência $x \equiv_{(m \cdot n)} a$ é equivalente ao sistema chinês
 \[
   \begin{cases}
     x \equiv_m a \\
@@ -269,14 +270,14 @@ Sejam $m, n \in \mathbb{Z}$ co-primos. A congruência $x \equiv_{(m \cdot n)} a$
 
 
 \section{Anéis}
-Seja $A$ um conjunto. Uma operação binária sobre $A$ é uma função
+Seja $A$ um conjunto. Uma operação binária $*$ sobre $A$ é uma função
 \[ *: A \times A \to A \]
 Uma operação binária \uline{pode} ter as seguintes propriedades:
 \begin{itemize}
-  \item associativa: $\forall\: a,b,c \in A: a * (b * c) = (a * b) * c$
-  \item elemento neutro: $\exists\: \lambda \in A, \forall\: a \in A: a * \lambda = \lambda * a = a$
-  \item inverso: $\forall\: a \in A, \exists\: a' \in A: a * a' = a' * a = \lambda$
-  \item comutatividade: $\forall\: a,b \in A: a * b = b * a$
+  \item \makebox[6cm][l]{$\forall\: a,b,c \in A: a * (b * c) = (a * b) * c$} (associativa)
+  \item \makebox[6cm][l]{$\exists\: \lambda \in A, \forall\: a \in A: a * \lambda = \lambda * a = a$} (elemento neutro)
+  \item \makebox[6cm][l]{$\forall\: a \in A, \exists\: a' \in A: a * a' = a' * a = \lambda$} (inverso)
+  \item \makebox[6cm][l]{$\forall\: a,b \in A: a * b = b * a$} (comutatividade)
 \end{itemize}
 \vspace{10pt}
 \uline{Definição}: Um conjunto $A$ com operações $+$ e $\cdot$ é um anel comutativo unitário se
@@ -284,18 +285,40 @@ Uma operação binária \uline{pode} ter as seguintes propriedades:
   \item $+$ e $\cdot$ são associativos, comutativos e possuem elemento neutro.
   \item $+$ possui inverso.
 \end{itemize}
-Se, além disso, $(A, +, \cdot)$ é tal que $(A \setminus \{0\}, \cdot)$ possui inverso, dizemos que $A$ é um corpo.
+\vspace{5pt}
+Se, além disso, $(A, +, \cdot)$ é tal que $(A^*, \cdot)$ possui inverso, então dizemos que $A$ é um corpo.
 
 
 \subsection{Anéis em $\mathbb{Z}$}
 Podemos definir as operações $+$ e $\cdot$ para as classes de equivalência de qualquer $m$ sobre os inteiros
-\begin{align*}
-  & \forall\: {[a]}_m, {[b]}_m \in \mathbb{Z}_{/m}: {[a]}_m + {[b]}_m := {[a + b]}_m \\
-  & \forall\: {[a]}_m, {[b]}_m \in \mathbb{Z}_{/m}: {[a]}_m \cdot {[b]}_m := {[a \cdot b]}_m
-\end{align*}
+\[
+  \arraycolsep=1.4pt\def\arraystretch{1.5}
+  \begin{array}{lcl}
+    \forall\: {[a]}_m, {[b]}_m \in \mathbb{Z}_{/m}: \enspace {[a]}_m & + & {[b]}_m := {[a + b]}_m \\
+    \forall\: {[a]}_m, {[b]}_m \in \mathbb{Z}_{/m}: \enspace {[a]}_m & \cdot & {[b]}_m := {[a \cdot b]}_m
+  \end{array}
+\]
 \uline{Teorema}: $(\mathbb{Z}_{/m}, +, \cdot)$ é um anel comutativo unitário $\forall\: m \in \mathbb{Z}$. \\[5pt]
 \uline{Teorema}: Seja $\bar{a} \cdot \bar{c} = \bar{b} \cdot \bar{c}$ em $Z_{/m}$. Se $c$ e $m$ são co-primos, então $\bar{a} = \bar{b}$
 
+\subsubsection{Conjunto das Unidades}
+O conjunto das unidades de $\mathbb{Z}_{/m}$ são os elementos de $\mathbb{Z}_{/m}$ que possuem um inverso multiplicativo
+\[ \mathcal{U}(\mathbb{Z}_{/m}) = \left\{ \bar{a} \in \mathbb{Z}_{/m} \>\big|\> \exists\: \bar{a}' \in \mathbb{Z}_{/m}: \bar{a} \cdot \bar{a}' = \bar{1} \right\} \]
+\uline{Teorema}: $\left(\mathcal{U}(\mathbb{Z}_{/m}), \cdot \right)$ é um grupo comutativo. \\[10pt]
+\uline{Teorema}: $\bar{a} \in \mathcal{U}(\mathbb{Z}_{/m})$ se e somente se $a$ e $m$ são co-primos.
+
+\subsubsection{Divisores de Zero}
+Um elemento $a \in A^*$ de um anel $(A, +, \cdot)$ é um divisor de zero se
+\[ \exists\: b \in A^*: \enspace a \cdot b = 0 \]
+\uline{Teorema}: Se $\bar{a} \in \mathbb{Z}_{/m}$ é uma unidade, então $\bar{a}$ não é divisor de zero.
+
+\subsubsection{Corolário}
+Seja $m \geq 2 \in \mathbb{Z}$. As seguintes \uline{afirmações} são equivalentes:
+\begin{itemize}
+  \item $(\mathbb{Z}_{/m}, +, \cdot)$ é um corpo, ou seja: $\mathcal{U}(\mathbb{Z}_{/m}) = \mathbb{Z}_{/m} \setminus \{\bar{0}\}$
+  \item $(\mathbb{Z}_{/m}, +, \cdot)$ não tem divisores de zero.
+  \item $m$ é primo
+\end{itemize}
 
 
 
