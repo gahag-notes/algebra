@@ -299,7 +299,8 @@ Podemos definir as operações $+$ e $\cdot$ para as classes de equivalência de
   \end{array}
 \]
 \uline{Teorema}: $(\mathbb{Z}_{/m}, +, \cdot)$ é um anel comutativo unitário $\forall\: m \in \mathbb{Z}$. \\[5pt]
-\uline{Teorema}: Seja $\bar{a} \cdot \bar{c} = \bar{b} \cdot \bar{c}$ em $Z_{/m}$. Se $c$ e $m$ são co-primos, então $\bar{a} = \bar{b}$
+\uline{Teorema}: Seja $\bar{a} \cdot \bar{c} = \bar{b} \cdot \bar{c}$ em $Z_{/m}$. Se $c$ e $m$ são co-primos, então $\bar{a} = \bar{b}$ \\[5pt]
+\uline{Lema}: Seja $(A, +, \cdot)$ um anel comutativo unitário. O inverso de um de um elemento $a \in A$, se existe, é único.
 
 \subsubsection{Conjunto das Unidades}
 O conjunto das unidades de $\mathbb{Z}_{/m}$ são os elementos de $\mathbb{Z}_{/m}$ que possuem um inverso multiplicativo
@@ -312,13 +313,29 @@ Um elemento $a \in A^*$ de um anel $(A, +, \cdot)$ é um divisor de zero se
 \[ \exists\: b \in A^*: \enspace a \cdot b = 0 \]
 \uline{Teorema}: Se $\bar{a} \in \mathbb{Z}_{/m}$ é uma unidade, então $\bar{a}$ não é divisor de zero.
 
-\subsubsection{Corolário}
-Seja $m \geq 2 \in \mathbb{Z}$. As seguintes \uline{afirmações} são equivalentes:
+\subsubsection{Teoremas}
+\uline{Corolário}: Seja $m \geq 2 \in \mathbb{Z}$. As seguintes \uline{afirmações} são equivalentes:
 \begin{itemize}
+  \setlength\itemsep{0px}
   \item $(\mathbb{Z}_{/m}, +, \cdot)$ é um corpo, ou seja: $\mathcal{U}(\mathbb{Z}_{/m}) = \mathbb{Z}_{/m} \setminus \{\bar{0}\}$
   \item $(\mathbb{Z}_{/m}, +, \cdot)$ não tem divisores de zero.
   \item $m$ é primo
 \end{itemize}
+\uline{Lema}: Seja $p$ primo. Em $\mathbb{Z}_{/p}$, a equação $x^2 = \bar{1}$ tem como únicas soluções $\pm \bar{1}$. \\[10pt]
+\uline{Teorema de Wilson}: Seja $n > 1 \in \mathbb{Z}$. Então $n > 0 \in \mathbb{P} \iff (n - 1)! \equiv_n -1$.
+
+\subsubsection{Pequeno Teorema de Fermat}
+Seja $p > 0 \in \mathbb{P}, a \in \mathbb{Z}$. Então
+\[ a^p \equiv_p a \]
+\uline{Corolário}: Seja $p > 0 \in \mathbb{P}, a \in \mathbb{Z}$ com $\text{mdc}(p,a) = 1$. Então
+\[ a^{p-1} \equiv_p 1 \]
+
+\subsubsection{Teorema de Euler-Fermat}
+Seja $a, n \in \mathbb{Z}$ com $n \geq 2$ e $\text{mdc}(a,n) = 1$. Então
+\begin{gather*}
+  \varphi(n) = \big| \left\{ k \mid \forall\: n > 0 \in \mathbb{Z}: \text{mdc}(k,n) = 1 \right\} \big| \\[5pt]
+  a^{\varphi(n)} \equiv_n 1
+\end{gather*}
 
 
 
