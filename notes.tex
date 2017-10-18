@@ -216,9 +216,9 @@ Duas equações lineares de congruência são equivalentes se o conjunto soluç�
     Então, esta equação é equivalente à equação reduzida
     \[ \frac{a}{d} \cdot x \equiv_{\frac{n}{d}} \frac{b}{d} \]
     Seja $ax \equiv_n b$ uma equação de congruência reduzida ($\text{mdc}(a, n) = 1$). \\
-    Seja $a'$ um inverso aritmético mod $n$ de $a$. \\
+    Seja $a'$ o inverso aritmético mod $n$ de $a$. \\
     Então, a equação é equivalente a
-    \[ x \equiv_n a \cdot a' \]
+    \[ x \equiv_n b \cdot a' \]
   \end{minipage}
 \end{tabbing}
 
@@ -245,16 +245,18 @@ Um sistema linear de equações de congruência é do tipo
 Dizemos que o sistema é compatível se ele possuir ao menos uma solução inteira. \\[5pt]
 Se um sistema é compatível, então todas suas equações são compatíveis. Então
 \[ \forall\: i \in [1, s]:\> \text{mdc}(a_i, n_i) \mid b_i \]
-Portanto, o sistema compatível é equivalente ao sistema
+
+\subsection{Sistema Chinês}
+Um sistema chinês de equações de congruência é um conjunto
 \[
   \begin{cases}
-    x \equiv_{n'_1} b_1 \\
+    x \equiv_{n_1} c_1 \\
     \quad \vdots \\
-    x \equiv_{n'_s} b_s
+    x \equiv_{n_s} c_s
   \end{cases}
-  \text{onde } n'_i = \frac{n_i}{\text{mdc}(a_i, n_i)}
+  \text{com mdc}(n_i, n_j) = 1 \quad \forall\: i \neq j
 \]
-\\[10pt]
+\uline{Teorema (Chinês do resto)}: Um sistema chinês tem única solução mod $n_1 \cdot \hdots \cdot n_s$. \\[10pt]
 \uline{Teorema}: Sejam $m, n \in \mathbb{Z}$ co-primos. A congruência $x \equiv_{(m \cdot n)} a$ é equivalente ao sistema chinês
 \[
   \begin{cases}
@@ -262,10 +264,6 @@ Portanto, o sistema compatível é equivalente ao sistema
     x \equiv_n a
   \end{cases}
 \]
-
-% sistema chinês
-% teorema chinês do resto
-% pics
 
 
 
