@@ -256,7 +256,7 @@ Um sistema chinês de equações de congruência é um conjunto
   \end{cases}
   \text{com mdc}(n_i, n_j) = 1 \quad \forall\: i \neq j
 \]
-\uline{Teorema (Chinês do resto)}: Um sistema chinês tem única solução mod $n_1 \cdot \hdots \cdot n_s$. \\[10pt]
+\uline{Teorema chinês do resto}: Um sistema chinês tem única solução mod $n_1 \cdot \hdots \cdot n_s$. \\[10pt]
 \uline{Teorema}: Sejam $m, n \in \mathbb{Z}$ co-primos. A congruência $x \equiv_{(m \cdot n)} a$ é equivalente ao sistema chinês
 \[
   \begin{cases}
@@ -347,7 +347,7 @@ Sejam $(A, +, \cdot)$ e $(B, +, \cdot)$ anéis. Uma função $f: A \to B$ é um 
 \vspace{5pt}
 Uma função $f$ é um \uline{isomorfismo} se $f$ é um homomorfismo e $f$ é bijetiva. \\[5pt]
 \begin{tabbing}
-  \uline{Teorema (Chinês do resto)}: \= Sejam $m,n > 1 \in \mathbb{Z}$ com $\text{mdc}(m,n) = 1$. A aplicação natural \\[-5pt]
+  \uline{Teorema chinês do resto}: \= Sejam $m,n > 1 \in \mathbb{Z}$ com $\text{mdc}(m,n) = 1$. A aplicação natural \\[-5pt]
   \begin{minipage}{\linewidth}
     \begin{gather*}
       \varphi: \mathbb{Z}_{/mn} \to \mathbb{Z}_{/m} \times \mathbb{Z}_{/n} \\
@@ -362,5 +362,30 @@ Uma função $f$ é um \uline{isomorfismo} se $f$ é um homomorfismo e $f$ é bi
 \\
 \uline{Corolário}: Seja $n > 1 \in \mathbb{Z}, a \in \mathbb{Z}$ co-primos. O inverso aritmético de $a$ módulo $n$ é
 \[ \bar{a}^{-1} = \bar{a}^{\varphi(n) - 1} \]
+
+
+
+\section{Pseudoprimos}
+Um pseudoprimo é um número $n \in \mathbb{N}^*$ \uline{composto} tal que
+\[ \exists\: b \in \mathbb{Z}, 1 < b < n - 1:\enspace b^{n - 1} \equiv_n 1 \]
+Denota-se que $n$ é pseudoprimo na base $b$.
+
+\subsection{Números de Carmichael}
+Um número $n \in \mathbb{N}^*$ composto é um número de Carmichael se ele é pseudoprimo em \uline{todas} bases $b$ tais que mdc$(b,n) = 1$. \\[10pt]
+\uline{Teorema de Korselt}: Um inteiro composto $n \geq 3$ é um número de Carmichael se e somente se
+\begin{itemize}
+  \item $\forall\: p \in \mathbb{P}: \> p \mid n \implies p^2 \nmid n$
+  \item $\forall\: p \in \mathbb{P}: \> p \mid n \implies p - 1 \mid n - 1$
+\end{itemize}
+
+\subsection{Testes de primalidade}
+Sejam $n > 2 \in \mathbb{N}$ e $a \in \mathbb{Z}$ co-primos. Fatoramos $n - 1 = 2^s \cdot d$ com $d \geq 1$ ímpar. Há duas possibilidades:
+\begin{itemize}
+  \item $a^d \equiv_n 1$
+  \item $\exists\: r \in [0, s - 1]:\enspace a^{2^r \cdot\, d} \equiv_n -1$
+\end{itemize}
+Se nenhum dos itens é verdadeiro, então $n$ é composto e $a$ é uma testemunha disso. \\[5pt]
+Se $n$ é composto, mas ambos itens são satisfeitos, então $n$ é um pseudoprimo forte na base $a$.
+
 
 \end{document}
