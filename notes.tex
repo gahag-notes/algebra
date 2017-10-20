@@ -378,7 +378,7 @@ Um número $n \in \mathbb{N}^*$ composto é um número de Carmichael se ele é p
   \item $\forall\: p \in \mathbb{P}: \> p \mid n \implies p - 1 \mid n - 1$
 \end{itemize}
 
-\subsection{Testes de primalidade}
+\subsection{Testes de Primalidade}
 Sejam $n > 2 \in \mathbb{N}$ e $a \in \mathbb{Z}$ co-primos. Fatoramos $n - 1 = 2^s \cdot d$ com $d \geq 1$ ímpar. Há duas possibilidades:
 \begin{itemize}
   \item $a^d \equiv_n 1$
@@ -386,6 +386,24 @@ Sejam $n > 2 \in \mathbb{N}$ e $a \in \mathbb{Z}$ co-primos. Fatoramos $n - 1 = 
 \end{itemize}
 Se nenhum dos itens é verdadeiro, então $n$ é composto e $a$ é uma testemunha disso. \\[5pt]
 Se $n$ é composto, mas ambos itens são satisfeitos, então $n$ é um pseudoprimo forte na base $a$.
+
+\subsubsection{Teste de Miller-Rabin}
+Seja $n > 2 \in \mathbb{Z}$ ímpar.
+\begin{itemize}
+  \item Escolhemos de forma aleatória um inteiro $a \in [2, n - 1]$. \\[5pt]
+        Se mdc$(a,n) > 1$, então $n$ é composto.
+  \item Fatoramos $n - 1 = 2^s \cdot d$ com $d$ ímpar, e calculamos em sequência os resíduos módulo $n$ de \\
+        \[ a^d, {\left( a^d \right)}^2, {\left( a^d \right)}^4, \hdots, {\left( a^d \right)}^{2^{(s - 1)}} \]
+        \begin{enumerate}
+          \item Se $a^d \equiv_n \pm 1$, então $n$ pode ser primo.
+          \item Se ${\left( a^d \right)}^{2^r} \equiv_n -1$ para algum $r \in [1, s - 1]$, então $n$ pode ser primo.
+        \end{enumerate}
+        Se nem (1) nem (2) acontecem, então $n$ é composto e $a$ é testemunha disso.
+\end{itemize}
+\begin{tabbing}
+  \uline{Teorema}: \= Seja $n > 2$ ímpar composto. O conjunto $\{ 1, \hdots, n-1\}$ contém no máximo \\[5pt]
+  \> $\dfrac{n - 1}{4}$ números co-primos com $n$ que \uline{não} são testemunhas de $n$ ser composto.
+\end{tabbing}
 
 
 \end{document}
